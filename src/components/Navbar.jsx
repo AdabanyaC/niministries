@@ -5,7 +5,7 @@ import { DefaultBtnNoArrow } from "./Buttons";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between bg-white p-6 rounded-md">
+    <div className="flex justify-between bg-white p-6 rounded-md nav-shadow">
       <div>
         <NavLink to={"/"}>
           <img src={Logo} alt="NIM Logo" />

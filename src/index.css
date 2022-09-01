@@ -9,3 +9,14 @@ body {
 .myShadow {
   box-shadow: -9.39054px 9.39054px 28.1716px 10.3296px rgba(74, 34, 179, 0.05);
 }
+
+.nav-shadow {
+  box-shadow: 6px 4px 30px rgba(6, 6, 64, 0.02);
+}
+
+.contact-container {
+  background-image: linear-gradient(90deg, #f4fbff 50%, #fff 50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 85.1%;
+}

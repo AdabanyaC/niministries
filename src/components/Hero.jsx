@@ -7,7 +7,7 @@ import RightArrowIcon from "./../assets/icons/arrowRight.svg";
 
 const Hero = () => {
   return (
-    <div className="flex">
+    <div className="flex mt-20">
       <div className="self-center w-1/2">
         <h1 className="text-blue font-extrabold text-7xl w-3/4 tracking-wide">
           Be stired as you grow

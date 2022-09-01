@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <Fragment>
       <div>
-        <div className="bg-[#F4FBFF] h-screen px-28 py-12">
+        <div className="bg-[#F4FBFF] h-fit px-28 py-12">
           <Navbar />
           <Hero />
         </div>

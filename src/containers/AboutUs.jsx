@@ -14,10 +14,10 @@ const AboutUs = () => {
       <div className="">
         <div className="bg-[#F4FBFF] h-fit px-28 py-12">
           <Navbar />
-          <h1 className="text-5xl text-blue text-center font-bold w-[892px] m-auto mt-16">
+          <h1 className="text-5xl text-blue text-center font-bold w-[892px] m-auto mt-28">
             Men saved, trained and ministry duplicated in the lives of many
           </h1>
-          <div className="mt-16 flex justify-center gap-10">
+          <div className="mt-28 flex justify-center gap-10">
             <div>
               <img src={AboutImage1} alt="Men and women worshipping Jesus" />
             </div>
