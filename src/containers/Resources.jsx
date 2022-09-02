@@ -67,26 +67,6 @@ const Resources = () => {
           <SearchInput />
         </div>
         <div className="flex justify-between flex-wrap px-28">
-          {/* <Card
-            url={Poster1}
-            title="Let's Talk Bible"
-            description="Happy New Month Beloved. Special countdown to SOTOS Lagos Edition which doubles as our Supernatural Class for the month of June ...."
-            footer={
-              <div className="flex justify-between">
-                <div className="flex">
-                  <img src={AnchorIcon} alt="Anchor Icon" />
-                  <img src={AppleIcon} alt="Apple Icon" />
-                  <img src={GoogleIcon} alt="Google Icon" />
-                  <img src={YoutubeAltIcon} alt="Youtube Icon" />
-                  <img src={SpotifyIcon} alt="Spotify Icon" />
-                </div>
-                <div className="flex gap-2">
-                  <img src={DownloadIcon} alt="Download Icon" className="w-6" />
-                  <img src={ExportIcon} alt="Export Icon" className="w-6" />
-                </div>
-              </div>
-            }
-          /> */}
           {loading ? (
             <div role="status" className="flex justify-center mt-10">
               <svg
