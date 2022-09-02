@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import AboutOurLead from "../components/AboutOurLead";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import NewsletterCTA from "../components/NewsletterCTA";
 import PartnershipCTA from "../components/PartnershipCTA";
 import WhoWeAre from "../components/WhoWeAre";
 import AboutImage1 from "./../assets/hero/abtImg1.svg";
@@ -41,6 +43,8 @@ const AboutUs = () => {
         <div className="mt-32">
           <PartnershipCTA />
         </div>
+        <NewsletterCTA />
+        <Footer />
       </div>
     </Fragment>
   );

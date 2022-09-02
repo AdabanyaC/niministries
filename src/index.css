@@ -6,8 +6,14 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.myShadow {
-  box-shadow: -9.39054px 9.39054px 28.1716px 10.3296px rgba(74, 34, 179, 0.05);
+.v-m-card {
+  background: linear-gradient(
+    111.38deg,
+    #000000 -17.44%,
+    rgba(0, 0, 0, 0.510417) 67.41%,
+    rgba(0, 0, 0, 0) 117.21%
+  );
+  backdrop-filter: blur(25px);
 }
 
 .nav-shadow {

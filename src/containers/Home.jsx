@@ -1,9 +1,11 @@
 import React, { Fragment } from "react";
 import About from "../components/About";
 import Events from "../components/Events";
+import Footer from "../components/Footer";
 import GetEdified from "../components/GetEdified";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import NewsletterCTA from "../components/NewsletterCTA";
 import PartnershipCTA from "../components/PartnershipCTA";
 import Testimonials from "../components/Testimonials";
 import AboutHero from "./../assets/hero/heroBg1.svg";
@@ -64,6 +66,8 @@ const Home = () => {
       <div className="mt-32">
         <PartnershipCTA />
       </div>
+      <NewsletterCTA />
+      <Footer />
     </Fragment>
   );
 };

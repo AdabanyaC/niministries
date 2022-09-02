@@ -14,6 +14,8 @@ import SpotifyIcon from "./../assets/social/spotify.svg";
 import DownloadIcon from "./../assets/icons/download.svg";
 import ExportIcon from "./../assets/icons/export.svg";
 import Card from "../components/Card";
+import NewsletterCTA from "../components/NewsletterCTA";
+import Footer from "../components/Footer";
 
 const Resources = () => {
   return (
@@ -223,6 +225,8 @@ const Resources = () => {
         <div className="mt-32">
           <PartnershipCTA />
         </div>
+        <NewsletterCTA />
+        <Footer />
       </div>
     </Fragment>
   );
