@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
+import axios from "axios";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import MeetPNIImage from "./../assets/hero/meetPNI.svg";
@@ -7,6 +8,30 @@ import InstagramIcon from "./../assets/icons/instagram.svg";
 import TwitterIcon from "./../assets/icons/twitter.svg";
 
 const MeetPNI = () => {
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState({});
+  const [error, setError] = useState("");
+
+  const getAboutTheLead = async () => {
+    setLoading(true);
+
+    try {
+      const aboutTheLeadData = await axios.get(
+        "https://nim-backend.herokuapp.com/api/about-the-lead"
+      );
+
+      setData(aboutTheLeadData.data.data.attributes);
+      setLoading(false);
+    } catch (err) {
+      setError(err.message);
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getAboutTheLead();
+  }, []);
+
   return (
     <Fragment>
       <div className="">
@@ -25,9 +50,15 @@ const MeetPNI = () => {
               Pastor Nelson Iheagwam
             </h1>
             <div className="flex justify-center gap-4 mt-10">
-              <img src={FacebookIcon} alt="Facebook Icon" />
-              <img src={InstagramIcon} alt="Instagram Icon" />
-              <img src={TwitterIcon} alt="Twitter Icon" />
+              <a href={data.facebook_url} target="_blank" rel="noreferrer">
+                <img src={FacebookIcon} alt="Facebook Icon" />
+              </a>
+              <a href={data.instagram_url} target="_blank" rel="noreferrer">
+                <img src={InstagramIcon} alt="Instagram Icon" />
+              </a>
+              <a href={data.twitter_url} target="_blank" rel="noreferrer">
+                <img src={TwitterIcon} alt="Twitter Icon" />
+              </a>
             </div>
           </div>
         </div>
@@ -38,20 +69,28 @@ const MeetPNI = () => {
           </h1>
           <hr className="mt-5 w-96 text-center m-auto border bg-[#2D295C]" />
           <p className="mt-5 text-justify">
-            Pastor Nelson Iheagwam is a believer passionate about men coming to
-            the truth of salvation, growing in the same and walking in the
-            fullness of the plans and purposes of God for them. He is passionate
-            about Apologetics, the things of the spirit, accurate teaching of
-            God’s word and fervour seen in the heart and acts of the believer.
-            <br />
-            <br />
-            With meetings under his belt, it is a testimony of his ministry that
-            many have been undoubtedly touched by the power of the Spirit and
-            fervour ignited in the heart of much more He serves as the Lead of
-            Nelson Iheagwam Ministries, which is an interdenominational ministry
-            expression where he lives out his ultimate vision to see men in
-            their multitude be saved, trained and sent to duplicate the same in
-            the lives of others.
+            {loading && (
+              <div role="status" className="flex justify-center mt-10">
+                <svg
+                  aria-hidden="true"
+                  className="w-12 h-12 text-gray-200 animate-spin fill-blue"
+                  viewBox="0 0 100 101"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                    fill="currentFill"
+                  />
+                </svg>
+                <span class="sr-only">Loading...</span>
+              </div>
+            )}
+            {data && data.caption}
           </p>
           <div className="mt-10 text-center">
             <button className="bg-blue text-white px-10 py-4 rounded-2xl text-sm w-52">

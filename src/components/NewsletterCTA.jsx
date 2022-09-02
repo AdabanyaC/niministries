@@ -13,7 +13,7 @@ const NewsletterCTA = () => {
       </div>
       <div className="self-end flex gap-8 w-1/2">
         <div className="mt-10 w-full">
-          <label for="first_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="first_name" className="block mb-2 text-sm font-bold ">
             Your Email
           </label>
           <input

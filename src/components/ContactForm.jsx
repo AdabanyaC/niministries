@@ -13,7 +13,7 @@ const ContactForm = () => {
       </div>
       <form>
         <div className="mt-10">
-          <label for="first_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="first_name" class="block mb-2 text-sm font-bold ">
             Your Name
           </label>
           <input
@@ -25,7 +25,7 @@ const ContactForm = () => {
           />
         </div>
         <div className="mt-10">
-          <label for="first_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="first_name" class="block mb-2 text-sm font-bold ">
             Your Email
           </label>
           <input
@@ -37,7 +37,7 @@ const ContactForm = () => {
           />
         </div>
         <div className="mt-10">
-          <label for="first_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="first_name" class="block mb-2 text-sm font-bold ">
             How can we help?
           </label>
           <textarea
