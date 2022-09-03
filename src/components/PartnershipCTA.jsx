@@ -19,9 +19,11 @@ const PartnershipCTA = () => {
           often as your commitment can carry it.
         </p>
         <div className="mt-10">
-          <button className="bg-white text-blue font-semibold px-10 py-4 rounded-2xl text-sm w-52">
-            Give Now
-          </button>
+          <a href="https://bit.ly/NIMflutterwave">
+            <button className="bg-white text-blue font-semibold px-10 py-4 rounded-2xl text-sm w-52">
+              Give Now
+            </button>
+          </a>
         </div>
       </div>
       <div>

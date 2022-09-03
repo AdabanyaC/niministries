@@ -21,6 +21,7 @@ const Resources = () => {
   const [loading, setLoading] = useState(false);
   const [sermons, setSermons] = useState([]);
   const [error, setError] = useState("");
+  const [readMore, setReadMore] = useState(false);
 
   const getSermons = async () => {
     setLoading(true);
@@ -41,6 +42,10 @@ const Resources = () => {
   useEffect(() => {
     getSermons();
   }, []);
+
+  const handleReadMore = () => {
+    setReadMore(!readMore);
+  };
 
   return (
     <Fragment>
@@ -98,11 +103,15 @@ const Resources = () => {
                 title,
                 youtube_link,
               } = sermon.attributes;
+
+              console.log("Caption", caption);
               return (
                 <Card
                   url={image_url}
                   title={title}
-                  description={caption}
+                  description={readMore ? caption : caption.substr(0, 150)}
+                  toggleReadMore={readMore ? `Read Less` : `Read More`}
+                  handleReadMore={handleReadMore}
                   footer={
                     <div className="flex justify-between">
                       <div className="flex gap-[-4px]">
