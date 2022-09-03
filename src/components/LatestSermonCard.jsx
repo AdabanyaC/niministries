@@ -6,7 +6,6 @@ import GoogleIcon from "./../assets/social/google.svg";
 import YoutubeAltIcon from "./../assets/social/youtube2.svg";
 import SpotifyIcon from "./../assets/social/spotify.svg";
 import TelegramIcon from "./../assets/social/telegram.svg";
-import ExportIcon from "./../assets/icons/export.svg";
 import ChevronDownIcon from "./../assets/icons/chevronDown.svg";
 
 const LatestSermonCard = () => {
@@ -110,9 +109,6 @@ const LatestSermonCard = () => {
                     <a href={telegram_link} target="_blank" rel="noreferrer">
                       <img src={TelegramIcon} alt="Telegram Icon" />
                     </a>
-                  </div>
-                  <div className="flex gap-2">
-                    <img src={ExportIcon} alt="Export Icon" className="w-6" />
                   </div>
                 </div>
               </div>

@@ -10,26 +10,50 @@ import GoogleIcon from "./../assets/social/google.svg";
 import YoutubeAltIcon from "./../assets/social/youtube2.svg";
 import SpotifyIcon from "./../assets/social/spotify.svg";
 import TelegramIcon from "./../assets/social/telegram.svg";
-import ExportIcon from "./../assets/icons/export.svg";
 import Card from "../components/Card";
 import NewsletterCTA from "../components/NewsletterCTA";
 import Footer from "../components/Footer";
-
-// https://nim-backend.herokuapp.com/api/sermons
+import Pagination from "../components/Pagination";
 
 const Resources = () => {
   const [loading, setLoading] = useState(false);
   const [sermons, setSermons] = useState([]);
   const [error, setError] = useState("");
   const [readMore, setReadMore] = useState(false);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  const handlePage1 = () => {
+    setPageNumber(1);
+  };
+  const handlePage2 = () => {
+    setPageNumber(2);
+  };
+  const handlePage3 = () => {
+    setPageNumber(3);
+  };
+  const handlePage4 = () => {
+    setPageNumber(4);
+  };
+  const handlePage5 = () => {
+    setPageNumber(5);
+  };
+  const handlePage6 = () => {
+    setPageNumber(6);
+  };
+  const handlePage7 = () => {
+    setPageNumber(7);
+  };
 
   const getSermons = async () => {
     setLoading(true);
 
     try {
+      console.log("Page Number", pageNumber);
       const sermonsData = await axios.get(
-        `https://nim-backend.herokuapp.com/api/sermons?sort=createdAt:DESC&pagination[page]=1&pagination[pageSize]=12`
+        `https://nim-backend.herokuapp.com/api/sermons?sort=createdAt:DESC&pagination[page]=${pageNumber}&pagination[pageSize]=12`
       );
+
+      console.log("Page Number", pageNumber);
 
       setSermons(sermonsData.data.data);
       setLoading(false);
@@ -104,7 +128,6 @@ const Resources = () => {
                 youtube_link,
               } = sermon.attributes;
 
-              console.log("Caption", caption);
               return (
                 <Card
                   url={image_url}
@@ -146,19 +169,24 @@ const Resources = () => {
                           <img src={TelegramIcon} alt="Telegram Icon" />
                         </a>
                       </div>
-                      <div className="flex gap-2">
-                        <img
-                          src={ExportIcon}
-                          alt="Export Icon"
-                          className="w-6"
-                        />
-                      </div>
                     </div>
                   }
                 />
               );
             })
           )}
+        </div>
+        <div className="mt-12">
+          <Pagination
+            pageNumber={pageNumber}
+            handlePage1={handlePage1}
+            handlePage2={handlePage2}
+            handlePage3={handlePage3}
+            handlePage4={handlePage4}
+            handlePage5={handlePage5}
+            handlePage6={handlePage6}
+            handlePage7={handlePage7}
+          />
         </div>
         <div className="mt-32">
           <PartnershipCTA />
