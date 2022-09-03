@@ -26,7 +26,7 @@ const Footer = () => {
           <img src={TwitterIcon} alt="Twitter Icon" />
         </div>
         <div className="self-end">
-          <p>NelsonIheagwamministries@gmail.com</p>
+          <p>nelsoniheagwamministeries@gmail.com</p>
         </div>
       </div>
     </div>

@@ -18,6 +18,11 @@ const PartnershipCTA = () => {
           for people who will partner with us, with any amount consistently as
           often as your commitment can carry it.
         </p>
+        <div className="mt-10">
+          <button className="bg-white text-blue font-semibold px-10 py-4 rounded-2xl text-sm w-52">
+            Give Now
+          </button>
+        </div>
       </div>
       <div>
         <div className="flex">

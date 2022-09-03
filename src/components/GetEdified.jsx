@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import CaptionAlt from "./CaptionAlt";
 import Card from "./Card";
 import Poster1 from "./../assets/posters/april.svg";
@@ -13,6 +14,34 @@ import DownloadIcon from "./../assets/icons/download.svg";
 import ExportIcon from "./../assets/icons/export.svg";
 
 const GetEdified = () => {
+  const [loading, setLoading] = useState(false);
+  const [sermons, setSermons] = useState([]);
+  const [error, setError] = useState("");
+
+  const getSermons = async () => {
+    setLoading(true);
+
+    try {
+      const sermonsData = await axios.get(
+        "https://nim-backend.herokuapp.com/api/sermons"
+      );
+
+      let dataArray = sermonsData.data.data;
+
+      setSermons(dataArray);
+      setLoading(false);
+    } catch (err) {
+      setError(err.message);
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getSermons();
+  }, []);
+
+  console.log(sermons);
+
   return (
     <div className="">
       <CaptionAlt

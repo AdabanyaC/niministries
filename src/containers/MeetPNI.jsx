@@ -45,7 +45,7 @@ const MeetPNI = () => {
           }}
         >
           <Navbar />
-          <div className="flex flex-col justify-center items-center w-full h-4/5">
+          <div className="flex flex-col justify-center items-center w-full h-full">
             <h1 className="text-white font-bold text-5xl">
               Pastor Nelson Iheagwam
             </h1>

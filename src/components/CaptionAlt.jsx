@@ -9,7 +9,7 @@ const CaptionAlt = ({ headerText, description }) => {
         <p className="text-xl mt-2"> {description} </p>
       </div>
       <div className="flex self-center gap-2">
-        <PrimaryButton btnText={"View All"} />
+        <PrimaryButton btnText={"View All"} href="resources" />
       </div>
     </div>
   );

@@ -1,21 +1,24 @@
+import { NavLink } from "react-router-dom";
 import RightArrowIconAlt from "./../assets/icons/arrowRightAlt.svg";
 import ChevronLeftIcon from "./../assets/icons/chevronLeft.svg";
 import ChevronRightIcon from "./../assets/icons/chevronRight.svg";
 
-export const PrimaryButton = ({ btnText, icon }) => {
+export const PrimaryButton = ({ btnText, icon, href }) => {
   return (
-    <button className="bg-blue text-white px-10 py-4 rounded-2xl flex gap-2">
-      {btnText}
-      {icon ? (
-        icon
-      ) : (
-        <img
-          src={ChevronRightIcon}
-          alt="Chevron Right Icon"
-          className="self-center"
-        />
-      )}
-    </button>
+    <NavLink to={`/${href}`}>
+      <button className="bg-blue text-white px-10 py-4 rounded-2xl flex gap-2">
+        {btnText}
+        {icon ? (
+          icon
+        ) : (
+          <img
+            src={ChevronRightIcon}
+            alt="Chevron Right Icon"
+            className="self-center"
+          />
+        )}
+      </button>
+    </NavLink>
   );
 };
 

@@ -42,8 +42,6 @@ const Resources = () => {
     getSermons();
   }, []);
 
-  console.log(sermons);
-
   return (
     <Fragment>
       <div className="">
@@ -107,7 +105,7 @@ const Resources = () => {
                   description={caption}
                   footer={
                     <div className="flex justify-between">
-                      <div className="flex">
+                      <div className="flex gap-[-4px]">
                         <a href={anchor_link} target="_blank" rel="noreferrer">
                           <img src={AnchorIcon} alt="Anchor Icon" />
                         </a>
@@ -133,11 +131,18 @@ const Resources = () => {
                         </a>
                       </div>
                       <div className="flex gap-2">
-                        <img
-                          src={DownloadIcon}
-                          alt="Download Icon"
-                          className="w-6"
-                        />
+                        <a
+                          href={telegram_link}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <img
+                            src={DownloadIcon}
+                            alt="Download Icon"
+                            className="w-6"
+                          />
+                        </a>
+
                         <img
                           src={ExportIcon}
                           alt="Export Icon"
