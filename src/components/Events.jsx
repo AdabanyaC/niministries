@@ -16,7 +16,7 @@ const Events = () => {
 
     try {
       const eventsData = await axios.get(
-        "https://nim-backend.herokuapp.com/api/events"
+        "https://nim-backend.herokuapp.com/api/events?sort=publishedAt:desc"
       );
 
       setEvents(eventsData.data.data);

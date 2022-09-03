@@ -9,7 +9,7 @@ import AppleIcon from "./../assets/social/apple.svg";
 import GoogleIcon from "./../assets/social/google.svg";
 import YoutubeAltIcon from "./../assets/social/youtube2.svg";
 import SpotifyIcon from "./../assets/social/spotify.svg";
-import DownloadIcon from "./../assets/icons/download.svg";
+import TelegramIcon from "./../assets/social/telegram.svg";
 import ExportIcon from "./../assets/icons/export.svg";
 import Card from "../components/Card";
 import NewsletterCTA from "../components/NewsletterCTA";
@@ -27,7 +27,7 @@ const Resources = () => {
 
     try {
       const sermonsData = await axios.get(
-        "https://nim-backend.herokuapp.com/api/sermons"
+        `https://nim-backend.herokuapp.com/api/sermons?sort=createdAt:DESC&pagination[page]=1&pagination[pageSize]=12`
       );
 
       setSermons(sermonsData.data.data);
@@ -129,20 +129,15 @@ const Resources = () => {
                         <a href={spotify_link} target="_blank" rel="noreferrer">
                           <img src={SpotifyIcon} alt="Spotify Icon" />
                         </a>
-                      </div>
-                      <div className="flex gap-2">
                         <a
                           href={telegram_link}
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <img
-                            src={DownloadIcon}
-                            alt="Download Icon"
-                            className="w-6"
-                          />
+                          <img src={TelegramIcon} alt="Telegram Icon" />
                         </a>
-
+                      </div>
+                      <div className="flex gap-2">
                         <img
                           src={ExportIcon}
                           alt="Export Icon"
