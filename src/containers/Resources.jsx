@@ -48,12 +48,9 @@ const Resources = () => {
     setLoading(true);
 
     try {
-      console.log("Page Number", pageNumber);
       const sermonsData = await axios.get(
         `https://nim-backend.herokuapp.com/api/sermons?sort=createdAt:DESC&pagination[page]=${pageNumber}&pagination[pageSize]=12`
       );
-
-      console.log("Page Number", pageNumber);
 
       setSermons(sermonsData.data.data);
       setLoading(false);

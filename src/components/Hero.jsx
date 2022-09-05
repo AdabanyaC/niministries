@@ -30,7 +30,7 @@ const Hero = () => {
           <SecondaryButton btnText={"Get Edified"} />
         </div>
       </div>
-      <div className="flex gap-4">
+      <div className="md:flex gap-4 hidden">
         <img src={HeroImg1} alt="" className="mt-28" />
         <img src={HeroImg2} alt="" className="mt-14" />
         <img src={HeroImg3} alt="" />

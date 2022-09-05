@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <Fragment>
       <div>
-        <div className="bg-[#F4FBFF] h-fit px-28 py-12">
+        <div className="bg-[#F4FBFF] h-fit px-28 py-12 w-full">
           <Navbar />
           <Hero />
         </div>
@@ -57,9 +57,9 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="mt-32 px-28 py-12">
+      {/* <div className="mt-32 px-28 py-12">
         <Testimonials />
-      </div>
+      </div> */}
       <div className="mt-32 px-28 py-12">
         <GetEdified />
       </div>

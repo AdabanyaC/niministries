@@ -31,8 +31,6 @@ const Events = () => {
     getEvents();
   }, []);
 
-  console.log(events);
-
   return (
     <div className="">
       <Caption

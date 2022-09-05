@@ -36,8 +36,6 @@ const GetEdified = () => {
     getSermons();
   }, []);
 
-  console.log(sermons);
-
   return (
     <div className="">
       <CaptionAlt
