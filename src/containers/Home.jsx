@@ -7,18 +7,17 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import NewsletterCTA from "../components/NewsletterCTA";
 import PartnershipCTA from "../components/PartnershipCTA";
-import Testimonials from "../components/Testimonials";
 import AboutHero from "./../assets/hero/heroBg1.svg";
 
 const Home = () => {
   return (
     <Fragment>
       <div>
-        <div className="bg-[#F4FBFF] h-fit px-28 py-12 w-full">
+        <div className="bg-[#F4FBFF] h-fit p-4 lg:px-28 lg:py-12 w-full">
           <Navbar />
           <Hero />
         </div>
-        <div className="mt-32 px-28 py-12">
+        <div className="mt-32 p-4 lg:px-28 lg:py-12">
           <Events />
         </div>
       </div>
@@ -57,10 +56,10 @@ const Home = () => {
           />
         </div>
       </div>
-      {/* <div className="mt-32 px-28 py-12">
+      {/* <div className="mt-32 p-4 lg:px-28 lg:py-12">
         <Testimonials />
       </div> */}
-      <div className="mt-32 px-28 py-12">
+      <div className="mt-32 p-4 lg:px-28 lg:py-12">
         <GetEdified />
       </div>
       <div className="mt-32">

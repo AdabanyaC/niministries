@@ -36,7 +36,7 @@ const MeetPNI = () => {
     <Fragment>
       <div className="">
         <div
-          className="px-28 py-12 h-screen w-full"
+          className="p-4 lg:px-28 lg:py-12 h-screen w-full"
           style={{
             background: `linear-gradient(0deg, rgba(0, 0, 100, 0.3), rgba(0, 0, 0, 0.3)), url(${MeetPNIImage})`,
             backgroundSize: "cover",
@@ -63,7 +63,7 @@ const MeetPNI = () => {
           </div>
         </div>
 
-        <div className="mt-20 px-28 py-12">
+        <div className="mt-20 p-4 lg:px-28 lg:py-12">
           <h1 className="font-bold text-5xl text-blue text-center">
             About Pastor Nelson
           </h1>

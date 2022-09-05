@@ -71,7 +71,7 @@ const Resources = () => {
   return (
     <Fragment>
       <div className="">
-        <div className="bg-[#F4FBFF] h-fit px-28 py-12">
+        <div className="bg-[#F4FBFF] h-fit p-4 lg:px-28 lg:py-12">
           <Navbar />
           <h1 className="text-5xl text-blue text-center font-bold mt-16">
             Get Edified

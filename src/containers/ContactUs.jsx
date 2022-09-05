@@ -7,7 +7,7 @@ const ContactUs = () => {
   return (
     <Fragment>
       <div className="">
-        <div className="contact-container h-fit px-28 py-12">
+        <div className="contact-container h-fit p-4 lg:px-28 lg:py-12">
           <Navbar />
           <div className="flex justify-between">
             <div className="">

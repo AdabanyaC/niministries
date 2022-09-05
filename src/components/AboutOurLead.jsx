@@ -3,7 +3,7 @@ import AboutImage from "./../assets/hero/abtImg6.svg";
 
 const AboutOurLead = () => {
   return (
-    <div className="flex justify-center gap-20 mt-32 px-28 py-12">
+    <div className="flex justify-center gap-20 mt-32 p-4 lg:px-28 lg:py-12">
       <div className="">
         <img
           src={AboutImage}

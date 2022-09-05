@@ -6,8 +6,8 @@ import ChevronRightIcon from "./../assets/icons/chevronRight.svg";
 export const PrimaryButton = ({ btnText, icon, href }) => {
   return (
     <NavLink to={`/${href}`}>
-      <button className="bg-blue text-white px-10 py-4 rounded-2xl flex gap-2">
-        {btnText}
+      <button className="bg-blue text-white px-5 py-4 md:px-10 md:py-4 rounded-2xl flex gap-2">
+        <span className="hidden md:block">{btnText}</span>
         {icon ? (
           icon
         ) : (
@@ -24,7 +24,7 @@ export const PrimaryButton = ({ btnText, icon, href }) => {
 
 export const DefaultButton = () => {
   return (
-    <button className="bg-[#0606401F] text-white px-10 py-4 rounded-2xl flex gap-2">
+    <button className="bg-[#0606401F] text-white px-6 py-4 rounded-2xl flex gap-2">
       <img
         src={ChevronLeftIcon}
         alt="Left Arrow Icon"
@@ -34,16 +34,18 @@ export const DefaultButton = () => {
   );
 };
 
-export const SecondaryButton = ({ btnText }) => {
+export const SecondaryButton = ({ btnText, href }) => {
   return (
-    <button className="bg-white text-blackalt border border-[#DBE2FA] px-10 py-4 rounded-2xl flex gap-2">
-      {btnText}
-      <img
-        src={RightArrowIconAlt}
-        alt="Right Arrow Icon"
-        className="self-center"
-      />
-    </button>
+    <NavLink to={`/${href}`}>
+      <button className="bg-white text-blackalt border border-[#DBE2FA] px-5 py-4 md:px-10 md:py-4 rounded-2xl flex gap-2">
+        {btnText}
+        <img
+          src={RightArrowIconAlt}
+          alt="Right Arrow Icon"
+          className="self-center"
+        />
+      </button>
+    </NavLink>
   );
 };
 

@@ -14,7 +14,7 @@ const AboutUs = () => {
   return (
     <Fragment>
       <div className="">
-        <div className="bg-[#F4FBFF] h-fit px-28 py-12">
+        <div className="bg-[#F4FBFF] h-fit p-4 lg:px-28 lg:py-12">
           <Navbar />
           <h1 className="text-5xl text-blue text-center font-bold w-[892px] m-auto mt-28">
             Men saved, trained and ministry duplicated in the lives of many

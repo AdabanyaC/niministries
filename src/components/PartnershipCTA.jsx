@@ -6,7 +6,7 @@ import AboutImage4 from "./../assets/hero/abtImg10.svg";
 
 const PartnershipCTA = () => {
   return (
-    <div className="bg-blue flex justify-center gap-20 mt-32 px-28 py-12">
+    <div className="bg-blue flex justify-center gap-20 mt-32 p-4 lg:px-28 lg:py-12">
       <div className="w-1/2 self-center">
         <h3 className="text-4xl font-bold text-white">Partner with us</h3>
         <p className="text-justify mt-5 text-white">

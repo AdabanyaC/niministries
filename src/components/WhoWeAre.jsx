@@ -3,7 +3,7 @@ import AboutImage from "./../assets/hero/abtImg5.svg";
 
 const WhoWeAre = () => {
   return (
-    <div className="flex justify-center gap-20 mt-32 px-28 py-12">
+    <div className="flex justify-center gap-20 mt-32 p-4 lg:px-28 lg:py-12">
       <div className="w-1/2 self-center">
         <h3 className="text-4xl text-blue font-bold">Who We Are</h3>
         <p className="text-justify mt-5">
