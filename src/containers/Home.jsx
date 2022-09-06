@@ -22,7 +22,7 @@ const Home = () => {
         </div>
       </div>
       <div
-        className="mt-32 p-28"
+        className="mt-32 px-28 py-16 h-[100vh]"
         style={{
           background: `linear-gradient(0deg, rgba(0, 0, 100, 0.3), rgba(0, 0, 0, 0.3)), url(${AboutHero})`,
           backgroundSize: "cover",
@@ -30,30 +30,34 @@ const Home = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="flex gap-10">
-          <About
-            title={"Our Vision"}
-            description="We envision men in their multitude saved, trained and sent out for the work of the ministry."
-          />
-          <About
-            title={"The Mission"}
-            description={
-              <ol>
-                <li className="mt-3">
-                  1. To have men come to the saving knowledge of Christ Jesus by
-                  the preaching of the gospel.
-                </li>
-                <li className="mt-3">
-                  2. To have men trained for the work of ministry by consistent
-                  and sound teaching of the word.
-                </li>
-                <li className="mt-3">
-                  3. To record men sent out to duplicate the former in the lives
-                  of others.
-                </li>
-              </ol>
-            }
-          />
+        <div className="w-full flex gap-10 h-full">
+          <div className="self-start w-1/2">
+            <About
+              title={"Our Vision"}
+              description="We envision men in their multitude saved, trained and sent out for the work of the ministry."
+            />
+          </div>
+          <div className="self-end w-1/2">
+            <About
+              title={"The Mission"}
+              description={
+                <ol>
+                  <li className="mt-3">
+                    1. To have men come to the saving knowledge of Christ Jesus
+                    by the preaching of the gospel.
+                  </li>
+                  <li className="mt-3">
+                    2. To have men trained for the work of ministry by
+                    consistent and sound teaching of the word.
+                  </li>
+                  <li className="mt-3">
+                    3. To record men sent out to duplicate the former in the
+                    lives of others.
+                  </li>
+                </ol>
+              }
+            />
+          </div>
         </div>
       </div>
       {/* <div className="mt-32 p-4 lg:px-28 lg:py-12">

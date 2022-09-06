@@ -9,7 +9,7 @@ const Card = ({
   handleReadMore,
 }) => {
   return (
-    <div className="bg-white p-6 w-[420px] myShadow rounded-2xl mt-8">
+    <div className="bg-white p-6 w-full lg:w-[420px] myShadow rounded-2xl mt-8">
       <img src={url} alt={title} className="h-[350px] w-[420px] rounded-2xl" />
       <h3 className="text-[24px] mt-4 font-bold"> {title} </h3>
       <p className="text-justify mt-4">

@@ -37,7 +37,7 @@ const Events = () => {
         headerText={"Happening Soon"}
         description="Stay up to date with information about upcoming events"
       />
-      <div className="flex justify-between mt-10 mb-24">
+      <div className="flex justify-between flex-col lg:flex-row mt-10 mb-24">
         {loading ? (
           <div role="status" className="flex justify-center mt-10">
             <svg

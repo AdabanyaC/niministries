@@ -13,7 +13,7 @@ body {
     rgba(0, 0, 0, 0.510417) 67.41%,
     rgba(0, 0, 0, 0) 117.21%
   );
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(45px);
 }
 
 .myShadow {
