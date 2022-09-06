@@ -34,9 +34,9 @@ const LatestSermonCard = () => {
   }, []);
 
   return (
-    <div className="bg-white px-12 py-8 flex justify-between rounded-3xl w-10/12 m-auto mt-16">
+    <div className="bg-white p-6 lg:px-12 lg:py-8 mt-16 flex justify-between flex-col-reverse lg:flex-row rounded-3xl w-full lg:w-10/12 m-auto">
       {loading ? (
-        <div role="status" className="flex justify-center mt-10">
+        <div role="status" className="flex justify-center">
           <svg
             aria-hidden="true"
             className="w-12 h-12 text-gray-200 animate-spin fill-blue"
@@ -67,17 +67,18 @@ const LatestSermonCard = () => {
             telegram_link,
             title,
             youtube_link,
-            publishedAt,
           } = sermon.attributes;
           return (
             <Fragment>
-              <div className="w-1/2">
-                <p className="text-xs">Dec 7, 2021 • Latest</p>
+              <div className="w-full lg:w-1/2 mt-5">
+                <p className="text-xs font-semibold">
+                  Dec 7, 2021 • Latest Sermon
+                </p>
                 <h3 className="font-bold text-2xl mt-4">{title}</h3>
                 <p className="text-justify mt-4">{caption}</p>
                 <div className="flex gap-2 mt-8">
                   <p className="text-blue italic text-sm">
-                    Join us physically or via these channels
+                    Listen or watch via these channels below
                   </p>
                   <img src={ChevronDownIcon} alt="Chevron Down Icon" />
                 </div>

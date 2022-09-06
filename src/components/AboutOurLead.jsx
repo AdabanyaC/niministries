@@ -3,7 +3,7 @@ import AboutImage from "./../assets/hero/abtImg6.svg";
 
 const AboutOurLead = () => {
   return (
-    <div className="flex justify-center gap-20 mt-32 p-4 lg:px-28 lg:py-12">
+    <div className="flex justify-center flex-col lg:flex-row gap-20 mt-32 p-4 lg:px-28 lg:py-12">
       <div className="">
         <img
           src={AboutImage}
@@ -11,7 +11,7 @@ const AboutOurLead = () => {
           className="w-full"
         />
       </div>
-      <div className="w-1/2 self-center">
+      <div className="w-full lg:w-1/2 self-center">
         <h3 className="text-4xl text-blue font-bold">Who We Are</h3>
         <p className="text-justify mt-5">
           Nelson Iheagwam is a believer passionate about men coming to the truth

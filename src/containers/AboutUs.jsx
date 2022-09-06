@@ -16,21 +16,37 @@ const AboutUs = () => {
       <div className="">
         <div className="bg-[#F4FBFF] h-fit p-4 lg:px-28 lg:py-12">
           <Navbar />
-          <h1 className="text-5xl text-blue text-center font-bold w-[892px] m-auto mt-28">
+          <h1 className="text-3xl lg:text-5xl text-blue text-center font-extrabold lg:w-[892px] lg:m-auto mt-14 lg:mt-28">
             Men saved, trained and ministry duplicated in the lives of many
           </h1>
-          <div className="mt-28 flex justify-center gap-10">
+          <div className="mt-28 mb-16 flex justify-center gap-4 lg:gap-10">
             <div>
-              <img src={AboutImage1} alt="Men and women worshipping Jesus" />
+              <img
+                src={AboutImage1}
+                alt="Men and women worshipping Jesus"
+                className="w-[80px] lg:w-auto"
+              />
             </div>
-            <div className="mt-28">
-              <img src={AboutImage2} alt="Men and women worshipping Jesus" />
+            <div className="mt-10 lg:mt-24">
+              <img
+                src={AboutImage2}
+                alt="Men and women worshipping Jesus"
+                className="w-[80px] lg:w-auto"
+              />
             </div>
             <div>
-              <img src={AboutImage3} alt="Men and women worshipping Jesus" />
+              <img
+                src={AboutImage3}
+                alt="Men and women worshipping Jesus"
+                className="w-[80px] lg:w-auto"
+              />
             </div>
-            <div className="mt-28">
-              <img src={AboutImage4} alt="Men and women worshipping Jesus" />
+            <div className="mt-10 lg:mt-24">
+              <img
+                src={AboutImage4}
+                alt="Men and women worshipping Jesus"
+                className="w-[80px] lg:w-auto"
+              />
             </div>
           </div>
         </div>

@@ -76,7 +76,7 @@ const Resources = () => {
           <h1 className="text-5xl text-blue text-center font-bold mt-16">
             Get Edified
           </h1>
-          <p className="text-center mt-5 w-[725px] m-auto">
+          <p className="text-center mt-5 w-full lg:w-[725px] m-auto">
             Enjoy access to our uplifting resources to aid your growth, stir you
             in the things of God and build a Christ centered consciousness.
           </p>
