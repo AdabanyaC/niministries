@@ -7,7 +7,9 @@ export const PrimaryButton = ({ btnText, icon, href }) => {
   return (
     <NavLink to={`/${href}`}>
       <button className="bg-blue text-white px-5 py-4 md:px-10 md:py-4 rounded-2xl flex gap-2">
-        <span className="hidden md:block">{btnText}</span>
+        <span className={`${!btnText ? `hidden` : `block`} md:block`}>
+          {btnText}
+        </span>
         {icon ? (
           icon
         ) : (

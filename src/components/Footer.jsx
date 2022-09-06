@@ -7,25 +7,23 @@ import TwitterIcon from "./../assets/icons/twitter.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-blue px-28 py-20">
+    <div className="bg-blue px-4 py-12 lg:px-28 lg:py-20">
       <div className="flex justify-center gap-8 text-white">
         <NavLink to={"/about-us"}>About Us</NavLink>
         <NavLink to={"/resources"}>Resources</NavLink>
         <NavLink to={"/contact-us"}>Contact Us</NavLink>
       </div>
-      <div className="flex justify-center gap-8 text-white">
-        <div className="self-end">
-          <p>
-            <p>Copyright 2022 © Nelson Iheagwam Ministries</p>
-          </p>
+      <div className="flex justify-center items-center flex-col lg:flex-row gap-8 text-white mt-10">
+        <div className="lg:self-end">
+          <p>Copyright 2022 © Niministries.org</p>
         </div>
-        <div className="flex gap-4 mt-10">
+        <div className="flex gap-4 lg:mt-10">
           <img src={FacebookIcon} alt="Facebook Icon" />
           <img src={InstagramIcon} alt="Instagram Icon" />
           <img src={LinkedInIcon} alt="LinkedIn Icon" />
           <img src={TwitterIcon} alt="Twitter Icon" />
         </div>
-        <div className="self-end">
+        <div className="lg:self-end">
           <p>nelsoniheagwamministeries@gmail.com</p>
         </div>
       </div>

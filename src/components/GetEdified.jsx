@@ -8,6 +8,7 @@ import GoogleIcon from "./../assets/social/google.svg";
 import YoutubeAltIcon from "./../assets/social/youtube2.svg";
 import SpotifyIcon from "./../assets/social/spotify.svg";
 import TelegramIcon from "./../assets/social/telegram.svg";
+import { PrimaryButton } from "./Buttons";
 
 const GetEdified = () => {
   const [loading, setLoading] = useState(false);
@@ -42,7 +43,7 @@ const GetEdified = () => {
         headerText={"Get Edified"}
         description="Stay up to date with our latest sermons and get blessed"
       />
-      <div className="flex justify-between mt-10 mb-24">
+      <div className="flex justify-between flex-col lg:flex-row mt-10 lg:mb-24">
         {loading ? (
           <div role="status" className="flex justify-center mt-10">
             <svg
@@ -117,6 +118,9 @@ const GetEdified = () => {
             );
           })
         )}
+      </div>
+      <div className="flex justify-end lg:mt-0 lg:hidden mt-10">
+        <PrimaryButton btnText={"View All"} href="resources" />
       </div>
     </div>
   );
