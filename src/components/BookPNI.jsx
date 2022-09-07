@@ -11,8 +11,6 @@ const BookPNI = () => {
           Would you like to invite Pastor Nelson Iheagwam
           <br />
           for your program/meeting? Kindly fill the form below
-          <br />
-          Call: +234 902 316 6760 or fill the form below
         </p>
       </div>
       <form>
