@@ -11,7 +11,7 @@ const Pagination = ({
   handlePage7,
 }) => {
   return (
-    <div className="flex justify-center gap-8 bg-gray-300 px-8 py-4 rounded-full w-fit m-auto">
+    <div className="flex justify-center gap-5 lg:gap-8 bg-gray-300 px-8 py-4 rounded-full w-full lg:w-fit m-auto">
       <button>Prev</button>
       <p
         className={`cursor-pointer ${

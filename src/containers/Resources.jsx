@@ -87,10 +87,10 @@ const Resources = () => {
         </div>
 
         {/* Search Form in Resources Page */}
-        <div className="px-28 pt-12">
+        <div className="px-4 lg:px-28 pt-12">
           <SearchInput />
         </div>
-        <div className="flex justify-between flex-wrap px-28">
+        <div className="flex justify-between flex-wrap px-4 lg:px-28">
           {loading ? (
             <div role="status" className="flex justify-center mt-10">
               <svg
@@ -173,7 +173,7 @@ const Resources = () => {
             })
           )}
         </div>
-        <div className="mt-12">
+        <div className="mt-12 p-4">
           <Pagination
             pageNumber={pageNumber}
             handlePage1={handlePage1}
