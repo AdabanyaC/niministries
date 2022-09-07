@@ -9,7 +9,7 @@ const ContactUs = () => {
       <div className="">
         <div className="contact-container h-fit p-4 lg:px-28 lg:py-12">
           <Navbar />
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-col lg:flex-row">
             <div className="">
               <ContactInformation />
             </div>

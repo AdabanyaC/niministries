@@ -25,13 +25,13 @@ const ContactInformation = () => {
         <img src={ContactImage} alt="Lady praying fervently" />
       </div>
       <div className="mt-10">
-        <p className="text-sm w-[430px]">
+        <p className="text-sm w-full lg:w-[430px]">
           See how modern marketers make great decisions with our fast, accurate
           and actionable data. You’re in great company.
         </p>
       </div>
-      <div className="mt-10">
-        <h5 className="font-medium italic">Pastor Nelson, Lead NIM</h5>
+      <div className="mt-4 lg:mt-10">
+        <h5 className="font-medium italic">Pastor Nelson Iheagwam, Lead NIM</h5>
       </div>
     </div>
   );

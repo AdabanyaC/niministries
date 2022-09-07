@@ -30,3 +30,13 @@ body {
   background-size: cover;
   background-position: 85.1%;
 }
+
+@media (max-width: 768px) {
+  .contact-container {
+    background-image: none;
+    background-color: #f4fbff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 85.1%;
+  }
+}

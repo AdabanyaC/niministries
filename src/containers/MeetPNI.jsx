@@ -46,7 +46,7 @@ const MeetPNI = () => {
         >
           <Navbar />
           <div className="flex flex-col justify-center items-center w-full h-full">
-            <h1 className="text-white font-bold text-5xl">
+            <h1 className="text-white font-bold text-center text-5xl">
               Pastor Nelson Iheagwam
             </h1>
             <div className="flex justify-center gap-4 mt-10">
@@ -64,10 +64,10 @@ const MeetPNI = () => {
         </div>
 
         <div className="mt-20 p-4 lg:px-28 lg:py-12">
-          <h1 className="font-bold text-5xl text-blue text-center">
+          <h1 className="font-bold text-4xl lg:text-5xl text-blue text-center">
             About Pastor Nelson
           </h1>
-          <hr className="mt-5 w-96 text-center m-auto border bg-[#2D295C]" />
+          <hr className="mt-5 w-72 lg:w-96 text-center m-auto border bg-[#2D295C]" />
           <p className="mt-5 text-justify">
             {loading && (
               <div role="status" className="flex justify-center mt-10">

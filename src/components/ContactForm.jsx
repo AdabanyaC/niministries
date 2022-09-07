@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div>
+    <div className="mt-16 lg:mt-0">
       <div>
         <h3 className="text-blue font-bold text-2xl">Contact Us</h3>
         <p>
