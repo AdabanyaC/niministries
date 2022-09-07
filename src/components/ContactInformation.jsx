@@ -2,7 +2,7 @@ import React from "react";
 import RightArrow from "./../assets/icons/RightArrowContact.svg";
 import ContactImage from "./../assets/hero/contactImg1.svg";
 
-const ContactInformation = () => {
+const ContactInformation = ({ toggleContact }) => {
   return (
     <div>
       <div className="mt-20">
@@ -18,7 +18,7 @@ const ContactInformation = () => {
         <p>We respond within minutes!</p>
       </div>
       <div className="flex gap-1 mt-10">
-        <p className="font-semibold">Book Now</p>
+        <p className="font-semibold">{toggleContact}</p>
         <img src={RightArrow} alt="Right Arrow Icon" />
       </div>
       <div className="mt-12">

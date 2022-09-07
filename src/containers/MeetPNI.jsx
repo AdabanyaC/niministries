@@ -6,6 +6,7 @@ import MeetPNIImage from "./../assets/hero/meetPNI.svg";
 import FacebookIcon from "./../assets/icons/facebook.svg";
 import InstagramIcon from "./../assets/icons/instagram.svg";
 import TwitterIcon from "./../assets/icons/twitter.svg";
+import { NavLink } from "react-router-dom";
 
 const MeetPNI = () => {
   const [loading, setLoading] = useState(false);
@@ -93,9 +94,11 @@ const MeetPNI = () => {
             {data && data.caption}
           </p>
           <div className="mt-10 text-center">
-            <button className="bg-blue text-white px-10 py-4 rounded-2xl text-sm w-52">
-              Book Now
-            </button>
+            <NavLink to="/contact-us">
+              <button className="bg-blue text-white px-10 py-4 rounded-2xl text-sm w-52">
+                Book Now
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>
