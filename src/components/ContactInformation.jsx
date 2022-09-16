@@ -13,7 +13,7 @@ const ContactInformation = ({ toggleContact }) => {
       </div>
       <div className="mt-10">
         <h4 className="text-blue text-lg font-extrabold">Book Pastor Nelson</h4>
-        <p>Schedule a one-on-one call with one of our experts.</p>
+        <p>Invite Pastor Nelson to your meeting.</p>
       </div>
       <div className="flex gap-1 mt-10">
         <p className="font-semibold">{toggleContact}</p>
@@ -24,8 +24,7 @@ const ContactInformation = ({ toggleContact }) => {
       </div>
       <div className="mt-10">
         <p className="text-sm w-full lg:w-[430px]">
-          See how modern marketers make great decisions with our fast, accurate
-          and actionable data. You’re in great company.
+          If we don't do ministry, people will suffer.
         </p>
       </div>
       <div className="mt-4 lg:mt-10">
