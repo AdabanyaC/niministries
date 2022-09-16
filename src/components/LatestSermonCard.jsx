@@ -107,9 +107,9 @@ const LatestSermonCard = () => {
                     <a href={spotify_link} target="_blank" rel="noreferrer">
                       <img src={SpotifyIcon} alt="Spotify Icon" />
                     </a>
-                    <a href={telegram_link} target="_blank" rel="noreferrer">
+                    {/* <a href={telegram_link} target="_blank" rel="noreferrer">
                       <img src={TelegramIcon} alt="Telegram Icon" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
