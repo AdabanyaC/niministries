@@ -10,7 +10,7 @@ const Hero = () => {
     <div className="flex my-20">
       <div className="self-center w-full lg:w-1/2">
         <h1 className="text-blue font-extrabold text-5xl lg:text-7xl w-full lg:w-3/4 lgtracking-wide">
-          Be stired as you grow
+          Be stirred as you grow
         </h1>
         <p className="text-xl mt-10 lg:mt-5 w-full lg:w-3/4 text-justify">
           Welcome to Nelson Iheagwam Ministries, We are commited to helping you

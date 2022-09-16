@@ -10,7 +10,7 @@ const BookPNI = () => {
         <p className="mt-2">
           Would you like to invite Pastor Nelson Iheagwam
           <br />
-          for your program/meeting? Kindly fill the form below
+          for your meeting? Kindly fill the form below
         </p>
       </div>
       <form>

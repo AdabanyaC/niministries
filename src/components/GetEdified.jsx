@@ -14,6 +14,7 @@ const GetEdified = () => {
   const [loading, setLoading] = useState(false);
   const [sermons, setSermons] = useState([]);
   const [error, setError] = useState("");
+  const [readMore, setReadMore] = useState(false);
 
   const getSermons = async () => {
     setLoading(true);
@@ -36,6 +37,10 @@ const GetEdified = () => {
   useEffect(() => {
     getSermons();
   }, []);
+
+  const handleReadMore = () => {
+    setReadMore(!readMore);
+  };
 
   return (
     <div className="">
@@ -81,10 +86,12 @@ const GetEdified = () => {
               <Card
                 url={image_url}
                 title={title}
-                description={caption}
+                description={readMore ? caption : caption.substr(0, 150)}
+                toggleReadMore={readMore ? `Read Less` : `Read More`}
+                handleReadMore={handleReadMore}
                 footer={
                   <div className="flex justify-between">
-                    <div className="flex gap-[-4px]">
+                    <div className="flex">
                       <a href={anchor_link} target="_blank" rel="noreferrer">
                         <img src={AnchorIcon} alt="Anchor Icon" />
                       </a>

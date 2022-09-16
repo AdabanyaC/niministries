@@ -12,7 +12,7 @@ const AboutOurLead = () => {
         />
       </div>
       <div className="w-full lg:w-1/2 self-center">
-        <h3 className="text-4xl text-blue font-bold">Who We Are</h3>
+        <h3 className="text-4xl text-blue font-bold">Our Lead</h3>
         <p className="text-justify mt-5">
           Nelson Iheagwam is a believer passionate about men coming to the truth
           of salvation, growing in the same and walking in the fullness of the

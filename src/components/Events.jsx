@@ -10,6 +10,7 @@ const Events = () => {
   const [loading, setLoading] = useState(false);
   const [events, setEvents] = useState([]);
   const [error, setError] = useState("");
+  const [readMore, setReadMore] = useState(false);
 
   const getEvents = async () => {
     setLoading(true);
@@ -30,6 +31,10 @@ const Events = () => {
   useEffect(() => {
     getEvents();
   }, []);
+
+  const handleReadMore = () => {
+    setReadMore(!readMore);
+  };
 
   return (
     <div className="">
@@ -66,10 +71,12 @@ const Events = () => {
               <Card
                 url={image_url}
                 title={title}
-                description={caption}
+                description={readMore ? caption : caption.substr(0, 150)}
+                toggleReadMore={readMore ? `Read Less` : `Read More`}
+                handleReadMore={handleReadMore}
                 footer={
                   <div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-4">
                       <p className="text-blue italic text-sm">
                         Join us physically or via these channels
                       </p>

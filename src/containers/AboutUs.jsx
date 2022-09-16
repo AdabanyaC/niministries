@@ -17,7 +17,7 @@ const AboutUs = () => {
         <div className="bg-[#F4FBFF] h-fit p-4 lg:px-28 lg:py-12">
           <Navbar />
           <h1 className="text-3xl lg:text-5xl text-blue text-center font-extrabold lg:w-[892px] lg:m-auto mt-14 lg:mt-28">
-            Men saved, trained and ministry duplicated in the lives of many
+            Men saved, trained and sent to do the work of ministry.
           </h1>
           <div className="mt-28 mb-16 flex justify-center gap-4 lg:gap-10">
             <div>

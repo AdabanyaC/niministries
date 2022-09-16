@@ -12,10 +12,8 @@ const ContactInformation = ({ toggleContact }) => {
         <p>We respond within minutes!</p>
       </div>
       <div className="mt-10">
-        <h4 className="text-blue text-lg font-extrabold">
-          How can we help you?
-        </h4>
-        <p>We respond within minutes!</p>
+        <h4 className="text-blue text-lg font-extrabold">Book Pastor Nelson</h4>
+        <p>Schedule a one-on-one call with one of our experts.</p>
       </div>
       <div className="flex gap-1 mt-10">
         <p className="font-semibold">{toggleContact}</p>

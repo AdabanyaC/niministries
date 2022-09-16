@@ -13,7 +13,7 @@ const Card = ({
       <img src={url} alt={title} className="h-[350px] w-[420px] rounded-2xl" />
       <h3 className="text-[24px] mt-4 font-bold"> {title} </h3>
       <p className="text-justify mt-4">
-        {description}{" "}
+        {description}
         <span
           className="text-gray-500 italic font-semibold cursor-pointer"
           onClick={handleReadMore}
