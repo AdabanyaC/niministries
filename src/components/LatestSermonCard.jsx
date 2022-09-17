@@ -71,9 +71,7 @@ const LatestSermonCard = () => {
           return (
             <Fragment>
               <div className="w-full lg:w-1/2 mt-5">
-                <p className="text-xs font-semibold">
-                  Dec 7, 2021 • Latest Sermon
-                </p>
+                <p className="text-xs font-semibold">Latest Sermon</p>
                 <h3 className="font-bold text-2xl mt-4">{title}</h3>
                 <p className="text-justify mt-4">{caption}</p>
                 <div className="flex gap-2 mt-8">

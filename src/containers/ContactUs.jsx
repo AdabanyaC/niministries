@@ -29,14 +29,12 @@ const ContactUs = () => {
                 toggleContact={!contact ? `Book Now` : `Contact Us`}
               />
             </div>
-            <div className="self-center">
+            <div className="w-full lg:w-[30rem] lg:mt-32">
               <div
-                className={`bg-white shadow lg:shadow-none lg:bg-[#f4fbff] flex justify-center gap-16 rounded-full mt-10 mb-6 lg:mb-10 ${
-                  book && `lg:mt-40`
-                }`}
+                className={`bg-white shadow lg:shadow-none lg:bg-[#f4fbff] flex justify-center rounded-full mt-10 mb-6 lg:mb-10`}
               >
                 <p
-                  className={`w-1/2 cursor-pointer  text-sm px-6 lg:px-12 py-2 ${
+                  className={`w-1/2 cursor-pointer  text-sm px-6 lg:px-12 py-2 text-center ${
                     contact && `bg-blue text-white rounded-full`
                   }`}
                   onClick={handleContact}
@@ -44,7 +42,7 @@ const ContactUs = () => {
                   Contact Us
                 </p>
                 <p
-                  className={`w-1/2 px-6 lg:px-12 py-2 text-sm cursor-pointer ${
+                  className={`w-1/2 cursor-pointer  text-sm px-6 lg:px-12 py-2 text-center ${
                     book && `bg-blue text-white rounded-full`
                   }`}
                   onClick={handleBook}
