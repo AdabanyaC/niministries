@@ -67,7 +67,7 @@ const Navbar = () => {
           </li>
           <hr />
           <li className="p-4">
-            <NavLink to="/sort">Meet PNI</NavLink>
+            <NavLink to="/meet-pni">Meet PNI</NavLink>
           </li>
           <hr />
         </ul>
