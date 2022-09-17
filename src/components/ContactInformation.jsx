@@ -5,7 +5,7 @@ import ContactImage from "./../assets/hero/contactImg1.svg";
 const ContactInformation = ({ toggleContact }) => {
   return (
     <div>
-      <div className="mt-20">
+      {/* <div className="mt-20">
         <h4 className="text-blue text-lg font-extrabold">
           How can we help you?
         </h4>
@@ -14,7 +14,7 @@ const ContactInformation = ({ toggleContact }) => {
       <div className="mt-10">
         <h4 className="text-blue text-lg font-extrabold">Book Pastor Nelson</h4>
         <p>Invite Pastor Nelson to your meeting.</p>
-      </div>
+      </div> */}
       <div className="flex gap-1 mt-10">
         <p className="font-semibold">{toggleContact}</p>
         <img src={RightArrow} alt="Right Arrow Icon" />
