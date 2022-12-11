@@ -14,7 +14,7 @@ const AboutOurLead = () => {
       <div className="w-full lg:w-1/2 self-center">
         <h3 className="text-4xl text-blue font-bold">Our Lead</h3>
         <p className="text-justify mt-5">
-          Nelson Iheagwam is a believer passionate about men coming to the truth
+          Pastor Nelson Iheagwam is a believer passionate about men coming to the truth
           of salvation, growing in the same and walking in the fullness of the
           plans and purposes of God for them. He is passionate about
           Apologetics, the things of the spirit, accurate teaching of God’s word
