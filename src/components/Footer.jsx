@@ -24,8 +24,8 @@ const Footer = () => {
           <img src={TwitterIcon} alt="Twitter Icon" />
         </div>
         <div className="lg:self-end">
-          <a href="mailto://nelsoniheagwamministries@gmail.com">
-            nelsoniheagwamministries@gmail.com
+          <a href="mailto://contact@niministries.org">
+          contact@niministries.org
           </a>
         </div>
       </div>

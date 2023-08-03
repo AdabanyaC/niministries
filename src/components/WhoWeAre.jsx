@@ -7,7 +7,7 @@ const WhoWeAre = () => {
       <div className="w-full lg:w-1/2 self-center">
         <h3 className="text-4xl text-blue font-bold">Who We Are</h3>
         <p className="text-justify mt-5">
-          Nelson Iheagwam Ministries is mandate with a vision to have men in
+          Nelson Iheagwam Ministries is a mandate with a vision to have men in
           their multitude saved, trained and have ministry duplicated in the
           lives of many. Our meetings are characterised by the accurate teaching
           of God’s word, an emphasis on a devotional culture, a befitting
@@ -30,3 +30,4 @@ const WhoWeAre = () => {
 };
 
 export default WhoWeAre;
+
