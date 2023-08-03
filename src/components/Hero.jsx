@@ -7,7 +7,7 @@ import RightArrowIcon from "./../assets/icons/arrowRight.svg";
 
 const Hero = () => {
   return (
-    <div className="flex my-20">
+    <div className="flex flex-col lg:flex-row my-20">
       <div className="self-center w-full lg:w-1/2">
         <h1 className="text-blue font-extrabold text-5xl lg:text-7xl w-full lg:w-3/4 lgtracking-wide">
           Be stirred as you grow
@@ -31,7 +31,7 @@ const Hero = () => {
           <SecondaryButton btnText={"Get Edified"} href="resources" />
         </div>
       </div>
-      <div className="md:flex gap-4 hidden">
+      <div className="flex gap-4">
         <img
           src={HeroImg1}
           alt=""
@@ -45,7 +45,7 @@ const Hero = () => {
         <img
           src={HeroImg3}
           alt=""
-          className=" w-52 h-80 object-cover rounded-xl"
+          className=" w-52 h-80 object-cover rounded-xl hidden md:block"
         />
       </div>
     </div>
