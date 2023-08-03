@@ -7,7 +7,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import NewsletterCTA from "../components/NewsletterCTA";
 import PartnershipCTA from "../components/PartnershipCTA";
-import AboutHero from "./../assets/hero/heroBg1.svg";
+import AboutHero from "./../assets/hero/heroBg1.jpg";
 
 const Home = () => {
   return (
@@ -22,12 +22,12 @@ const Home = () => {
         </div>
       </div>
       <div
-        className="mt-32 px-4 py-12 lg:px-28 lg:py-12 lg:h-[100vh]"
+        className="mt-32 px-4 py-12 lg:px-8 lg:py-12 lg:h-[100vh]"
         style={{
-          background: `linear-gradient(0deg, rgba(0, 0, 100, 0.3), rgba(0, 0, 0, 0.3)), url(${AboutHero})`,
+          background: `linear-gradient(0deg, rgba(0, 0, 70, 0.5), rgba(0, 0, 0, 0.2)), url(${AboutHero})`,
           backgroundSize: "cover",
           // backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
         }}
       >
         <div className="w-full flex flex-col lg:flex-row gap-56 lg:gap-14 h-full">
@@ -40,6 +40,7 @@ const Home = () => {
           <div className="self-end w-full lg:w-1/2">
             <About
               title={"The Mission"}
+              margin="ml-auto"
               description={
                 <ol>
                   <li className="mt-3">
