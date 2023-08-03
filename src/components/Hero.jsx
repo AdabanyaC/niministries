@@ -1,7 +1,7 @@
 import React from "react";
-import HeroImg1 from "./../assets/hero/heroImg1.svg";
-import HeroImg2 from "./../assets/hero/heroImg2.svg";
-import HeroImg3 from "./../assets/hero/heroImg3.svg";
+import HeroImg1 from "./../assets/hero/heroImg1.jpg";
+import HeroImg2 from "./../assets/hero/heroImg2.jpg";
+import HeroImg3 from "./../assets/hero/heroImg3.jpg";
 import { PrimaryButton, SecondaryButton } from "./Buttons";
 import RightArrowIcon from "./../assets/icons/arrowRight.svg";
 
@@ -32,9 +32,21 @@ const Hero = () => {
         </div>
       </div>
       <div className="md:flex gap-4 hidden">
-        <img src={HeroImg1} alt="" className="mt-24" />
-        <img src={HeroImg2} alt="" className="mt-12" />
-        <img src={HeroImg3} alt="" />
+        <img
+          src={HeroImg1}
+          alt=""
+          className="mt-24 w-52 h-80 object-cover rounded-xl"
+        />
+        <img
+          src={HeroImg2}
+          alt=""
+          className="mt-12 w-52 h-80 object-cover rounded-xl"
+        />
+        <img
+          src={HeroImg3}
+          alt=""
+          className=" w-52 h-80 object-cover rounded-xl"
+        />
       </div>
     </div>
   );
