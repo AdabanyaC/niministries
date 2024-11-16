@@ -49,7 +49,7 @@ const Resources = () => {
 
     try {
       const sermonsData = await axios.get(
-        `https://nim-backend.herokuapp.com/api/sermons?sort=createdAt:DESC&pagination[page]=${pageNumber}&pagination[pageSize]=12`
+        `https://nim-backend-zwlf.onrender.com/api/sermons?sort=createdAt:DESC&pagination[page]=${pageNumber}&pagination[pageSize]=12`
       );
 
       setSermons(sermonsData.data.data);

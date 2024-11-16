@@ -21,7 +21,7 @@ const BookPNI = () => {
     setLoading(true);
 
     axios
-      .post(`https://nim-mail-service.herokuapp.com/api/v1/email/book-pni`, {
+      .post(`https://nim-mailing-service.onrender.com/api/v1/email/book-pni`, {
         sender_name: senderName,
         email: email,
         church_name: churchName,

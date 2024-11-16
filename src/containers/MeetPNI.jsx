@@ -18,7 +18,7 @@ const MeetPNI = () => {
 
     try {
       const aboutTheLeadData = await axios.get(
-        "https://nim-backend.herokuapp.com/api/about-the-lead"
+        `https://nim-backend-zwlf.onrender.com/api/about-the-lead`
       );
 
       setData(aboutTheLeadData.data.data.attributes);
