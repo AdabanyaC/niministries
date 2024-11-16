@@ -28,7 +28,7 @@ const ContactForm = () => {
     setLoading(true);
 
     axios
-      .post(`https://nim-mail-service.herokuapp.com/api/v1/email/contact-us`, {
+      .post(`https://nim-mailing-service.onrender.com/api/v1/email/contact-us`, {
         sender_name: senderName,
         email: email,
         message: message,

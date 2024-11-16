@@ -21,7 +21,7 @@ const GetEdified = () => {
 
     try {
       const sermonsData = await axios.get(
-        "https://nim-backend.herokuapp.com/api/sermons?sort=createdAt:DESC&pagination[page]=1&pagination[pageSize]=3"
+        `https://nim-backend-zwlf.onrender.com/api/sermons?sort=createdAt:DESC&pagination[page]=1&pagination[pageSize]=3`
       );
 
       let dataArray = sermonsData.data.data;

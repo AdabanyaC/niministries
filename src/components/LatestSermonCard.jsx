@@ -18,7 +18,7 @@ const LatestSermonCard = () => {
 
     try {
       const sermonsData = await axios.get(
-        `https://nim-backend.herokuapp.com/api/sermons?sort=createdAt:DESC&pagination[page]=1&pagination[pageSize]=1`
+        `https://nim-backend-zwlf.onrender.com/api/sermons?sort=createdAt:DESC&pagination[page]=1&pagination[pageSize]=1`
       );
 
       setSermons(sermonsData.data.data);
