@@ -39,7 +39,7 @@ const LatestSermonCard = () => {
         <div role="status" className="flex justify-center">
           <svg
             aria-hidden="true"
-            className="w-12 h-12 text-gray-200 animate-spin fill-blu"
+            className="w-12 h-12 text-gray-200 animate-spin fill-blue"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
