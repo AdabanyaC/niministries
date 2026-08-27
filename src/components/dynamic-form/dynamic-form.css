@@ -1,0 +1,340 @@
+.df-root {
+  --df-background: #ffffff;
+  --df-surface: #ffffff;
+  --df-text: #14142a;
+  --df-muted: #6b7280;
+  --df-primary: #060640;
+  --df-primary-contrast: #ffffff;
+  --df-border: #dbe2fa;
+  --df-error: #b42318;
+  --df-success: #147d64;
+  --df-radius: 16px;
+  --df-font-family: "Montserrat", sans-serif;
+  --df-spacing: 24px;
+  width: 100%;
+  color: var(--df-text);
+  font-family: var(--df-font-family);
+}
+
+.df-root *,
+.df-root *::before,
+.df-root *::after {
+  box-sizing: border-box;
+}
+
+.df-card {
+  width: min(100%, 760px);
+  margin-inline: auto;
+  padding: clamp(24px, 5vw, 48px);
+  color: var(--df-text);
+  background: var(--df-background);
+  border: 1px solid var(--df-border);
+  border-radius: calc(var(--df-radius) * 1.5);
+  box-shadow: -9px 9px 28px 10px rgba(74, 34, 179, 0.05);
+}
+
+.df-header {
+  margin-bottom: calc(var(--df-spacing) * 1.35);
+}
+
+.df-eyebrow {
+  margin: 0 0 8px;
+  color: var(--df-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.df-title {
+  margin: 0;
+  color: var(--df-primary);
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.df-copy {
+  max-width: 640px;
+  margin: 12px 0 0;
+  color: var(--df-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.df-required-note {
+  margin: 12px 0 0;
+  color: var(--df-muted);
+  font-size: 0.75rem;
+}
+
+.df-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--df-spacing);
+}
+
+.df-field {
+  min-width: 0;
+  animation: df-field-enter 240ms ease-out both;
+}
+
+.df-field-full {
+  grid-column: 1 / -1;
+}
+
+.df-control-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.df-label,
+.df-checkbox-title {
+  color: var(--df-text);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.df-required {
+  color: var(--df-error);
+}
+
+.df-description {
+  display: block;
+  margin: 5px 0 0;
+  color: var(--df-muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.df-input {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  color: var(--df-text);
+  background: var(--df-surface);
+  border: 1px solid var(--df-border);
+  border-radius: var(--df-radius);
+  outline: none;
+  font: inherit;
+  font-size: 0.875rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.df-input::placeholder {
+  color: color-mix(in srgb, var(--df-muted) 72%, transparent);
+}
+
+.df-input:focus-visible,
+.df-radio:focus-visible,
+.df-checkbox:focus-visible,
+.df-button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--df-primary) 24%, transparent);
+  outline-offset: 2px;
+}
+
+.df-input[aria-invalid="true"] {
+  border-color: var(--df-error);
+}
+
+.df-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.df-select {
+  appearance: auto;
+}
+
+.df-fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.df-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.df-option {
+  display: flex;
+  flex: 1 1 140px;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 14px;
+  cursor: pointer;
+  background: var(--df-surface);
+  border: 1px solid var(--df-border);
+  border-radius: var(--df-radius);
+  font-size: 0.875rem;
+}
+
+.df-option:has(.df-radio:checked) {
+  color: var(--df-primary);
+  border-color: var(--df-primary);
+  box-shadow: inset 0 0 0 1px var(--df-primary);
+}
+
+.df-radio,
+.df-checkbox {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  accent-color: var(--df-primary);
+}
+
+.df-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.df-error,
+.df-submit-error,
+.df-unsupported {
+  color: var(--df-error);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.df-error {
+  margin: 6px 0 0;
+}
+
+.df-submit-error,
+.df-unsupported {
+  margin: var(--df-spacing) 0 0;
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--df-error) 7%, white);
+  border: 1px solid color-mix(in srgb, var(--df-error) 24%, white);
+  border-radius: var(--df-radius);
+}
+
+.df-button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  color: var(--df-primary-contrast);
+  background: var(--df-primary);
+  border: 1px solid var(--df-primary);
+  border-radius: var(--df-radius);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.df-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.df-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.df-submit {
+  width: 100%;
+  margin-top: calc(var(--df-spacing) * 1.35);
+}
+
+.df-button-secondary {
+  color: var(--df-primary);
+  background: var(--df-surface);
+}
+
+.df-completion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: var(--df-spacing);
+  text-align: center;
+}
+
+.df-success-mark {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--df-spacing);
+  place-items: center;
+  color: var(--df-primary-contrast);
+  background: var(--df-success);
+  border-radius: 999px;
+  font-size: 1.75rem;
+}
+
+.df-completion-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: var(--df-spacing);
+}
+
+@keyframes df-field-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .df-card {
+    padding: 24px 20px;
+  }
+
+  .df-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .df-field-half,
+  .df-field-full {
+    grid-column: 1;
+  }
+
+  .df-options,
+  .df-completion-actions {
+    flex-direction: column;
+  }
+
+  .df-option {
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+
+  .df-button,
+  .df-completion-actions {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .df-field {
+    animation: none;
+  }
+
+  .df-button,
+  .df-input {
+    transition: none;
+  }
+}
