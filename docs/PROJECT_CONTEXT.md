@@ -82,7 +82,7 @@ The detailed visual language and reuse rules are in the repository-root `DESIGN.
 
 The canonical production origin is `https://www.niministries.org`. Static crawler assets live in `public/`: `sitemap.xml` lists every public route, `robots.txt` advertises the sitemap, and `llms.txt` describes the site and its key pages for LLM-oriented discovery.
 
-`public/index.html` contains the crawl-safe default description, canonical URL, Open Graph, X/Twitter card, and Organization structured data. `src/components/Seo.jsx` updates titles, descriptions, canonical URLs, and social metadata when the SPA route changes. The shared social image is the optimized JPEG `public/og-image.jpg` (1200 × 630). Because the site is a client-rendered SPA, non-JavaScript social crawlers receive the default site-wide preview on every route; route-specific previews for those crawlers would require deployment-level prerendering or server rendering.
+`public/index.html` contains the crawl-safe default description, canonical URL, Open Graph, X/Twitter card, and Organization structured data. `src/components/Seo.jsx` updates titles, descriptions, canonical URLs, and social metadata when the SPA route changes. The shared social image is the optimized JPEG `public/og-image.jpg` (1200 × 630), published through a versioned URL so social-crawler caches can be refreshed when the asset changes. Because the site is a client-rendered SPA, non-JavaScript social crawlers receive the default site-wide preview on every route; route-specific previews for those crawlers would require deployment-level prerendering or server rendering.
 
 ## Current behavior gaps and technical debt
 

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 const SITE_ORIGIN = "https://www.niministries.org";
 const SITE_NAME = "Nelson Iheagwam Ministries";
-const SHARE_IMAGE = `${SITE_ORIGIN}/og-image.jpg`;
+const SHARE_IMAGE = `${SITE_ORIGIN}/og-image.jpg?v=20260828`;
 const SHARE_IMAGE_ALT =
   "Pastor Nelson Iheagwam preaching to a congregation";
 
