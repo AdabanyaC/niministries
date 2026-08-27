@@ -61,7 +61,7 @@
         "mode": "cors"
       },
       "googleAppsScript": {
-        "url": "https://script.google.com/macros/s/AKfycbxxT5psT4MUqbMNU6Ij5LoodhXGjS4PdRU3qHNmO_Kq1Cxx3ukvB1f-7KGHhASKf_Rs/exec",
+        "url": "https://script.google.com/macros/s/AKfycbxIMtDMdZXMXb71pj34z-daxVNn7_pk_neYMg_Ant9thLnTzwpjShZZu9qVcxUhk9vr/exec",
         "method": "POST",
         "headers": { "Content-Type": "text/plain;charset=utf-8" },
         "bodyFormat": "json",
