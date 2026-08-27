@@ -17,10 +17,12 @@ The site is the public web presence for Nelson Iheagwam Ministries (NIM). It int
 - Axios for browser-side HTTP requests.
 - Jest and React Testing Library through Create React App.
 - Static photography, SVG compositions, icons, and illustrations under `src/assets`.
+- Node.js `24.x` is declared in `package.json` for local tooling and Vercel builds.
 
 The tracked dependency lock is `package-lock.json`, so npm is the canonical package manager.
 
 ## Runtime shape
+
 
 `src/index.js` mounts `App` in React strict mode. `src/App.js` wraps the application in `BrowserRouter` and selects one route-level container. Containers compose reusable components; API-backed components load normalized public content through `src/services/contentApi.js` in `useEffect` hooks.
 
