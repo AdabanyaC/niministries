@@ -31,3 +31,5 @@ npm test -- --watchAll=false
 - `AGENTS.md` — repository conventions and Codex guidance
 - `docs/PROJECT_CONTEXT.md` — architecture, routes, integrations, and known technical debt
 - `DESIGN.md` — visual language, tokens, components, and layout rules
+# nim-website-live
+# niministries

@@ -15,7 +15,7 @@ const Footer = () => {
       </div>
       <div className="flex justify-center items-center flex-col lg:flex-row gap-8 text-white mt-10">
         <div className="lg:self-end">
-          <p>Copyright 2022 © Niministries.org</p>
+          <p>Copyright 2026 © Niministries.org</p>
         </div>
         <div className="flex gap-4 lg:mt-10">
           <img src={FacebookIcon} alt="Facebook Icon" />
