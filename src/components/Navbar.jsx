@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Logo from "./../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 import { DefaultBtnNoArrow } from "./Buttons";
@@ -13,8 +13,19 @@ const Navbar = () => {
   ];
 
   const handleToggleNav = () => {
-    setToggleNav(!toggleNav);
+    setToggleNav((isOpen) => !isOpen);
   };
+
+  useEffect(() => {
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") {
+        setToggleNav(false);
+      }
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
 
   return (
     <Fragment>
@@ -26,21 +37,29 @@ const Navbar = () => {
         </div>
         <button
           type="button"
-          className="self-center block text-blue lg:hidden"
+          className="group relative flex h-11 w-11 items-center justify-center self-center rounded-full border border-mist bg-white text-blue transition-colors duration-200 hover:bg-devotional focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 motion-reduce:transition-none lg:hidden"
           onClick={handleToggleNav}
           aria-expanded={toggleNav}
           aria-controls="mobile-navigation"
-          aria-label="Toggle navigation"
+          aria-label={toggleNav ? "Close navigation" : "Open navigation"}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            className="bi bi-menu-button-wide h-7 w-7"
-            viewBox="0 0 16 16"
-          >
-            <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v2A1.5 1.5 0 0 1 14.5 5h-13A1.5 1.5 0 0 1 0 3.5v-2zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-13z" />
-            <path d="M2 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm10.823.323-.396-.396A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
-          </svg>
+          <span className="relative block h-4 w-5" aria-hidden="true">
+            <span
+              className={`absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-current transition-transform duration-300 motion-reduce:transition-none ${
+                toggleNav ? "translate-y-[7px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-[7px] block h-0.5 w-5 rounded-full bg-current transition-opacity duration-200 motion-reduce:transition-none ${
+                toggleNav ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-[14px] block h-0.5 w-5 rounded-full bg-current transition-transform duration-300 motion-reduce:transition-none ${
+                toggleNav ? "-translate-y-[7px] -rotate-45" : ""
+              }`}
+            />
+          </span>
         </button>
         <div className="self-center hidden lg:block">
           <ul className="flex gap-8 font-medium">
@@ -60,25 +79,36 @@ const Navbar = () => {
       {/* Mobile Nav */}
       <div
         id="mobile-navigation"
-        className={`mt-4 bg-white rounded lg:hidden ${
-          toggleNav ? `block` : `hidden`
+        data-state={toggleNav ? "open" : "closed"}
+        aria-hidden={!toggleNav}
+        className={`mt-4 overflow-hidden rounded-2xl border border-mist bg-white nav-shadow transition-[max-height,opacity,transform,visibility] duration-300 ease-out motion-reduce:transition-none lg:hidden ${
+          toggleNav
+            ? "visible max-h-[32rem] translate-y-0 opacity-100"
+            : "invisible max-h-0 -translate-y-2 opacity-0 pointer-events-none"
         }`}
       >
-        <ul className="font-semibold">
+        <ul className="divide-y divide-mist/70 px-2 pt-2 font-semibold">
           {navItems.map((item) => (
-            <Fragment key={item.to}>
-              <li className="p-4">
-                <NavLink to={item.to} onClick={() => setToggleNav(false)}>
+            <li key={item.to}>
+              <NavLink
+                className={({ isActive }) =>
+                  `block rounded-xl px-4 py-4 transition-colors motion-reduce:transition-none ${
+                    isActive
+                      ? "bg-devotional text-blue"
+                      : "text-blackalt hover:bg-devotional hover:text-blue"
+                  }`
+                }
+                to={item.to}
+                onClick={() => setToggleNav(false)}
+              >
                   {item.label}
-                </NavLink>
-              </li>
-              <hr />
-            </Fragment>
+              </NavLink>
+            </li>
           ))}
         </ul>
         <div className="p-4">
-          <NavLink to="/contact-us">
-            <button className="bg-blue text-white px-10 py-4 rounded-2xl text-sm w-full">
+          <NavLink to="/contact-us" onClick={() => setToggleNav(false)}>
+            <button className="w-full rounded-2xl bg-blue px-10 py-4 text-sm text-white transition-colors hover:bg-blackalt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 motion-reduce:transition-none">
               Contact Us
             </button>
           </NavLink>

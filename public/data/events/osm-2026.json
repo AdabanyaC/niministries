@@ -12,8 +12,8 @@
   },
   "location": {
     "name": "The Envoys",
-    "area": "Ogba",
-    "label": "The Envoys, Ogba"
+    "area": "6A Cocoa Industries Rd, Ogba, Ikeja 101233",
+    "label": "6A Cocoa Industries Rd, Ogba, Ikeja 101233, Lagos"
   },
   "actions": {
     "primary": { "label": "Register for free", "target": "registration" }
@@ -26,7 +26,7 @@
     "eyebrow": "One Special Meeting",
     "headline": "One gathering. Lasting clarity.",
     "autoPlay": true,
-    "muted": false,
+    "muted": true,
     "loop": true,
     "playsInline": true,
     "muteLabel": "Mute video",
@@ -61,7 +61,7 @@
         "mode": "cors"
       },
       "googleAppsScript": {
-        "url": "https://script.google.com/macros/s/AKfycbxxT5psT4MUqbMNU6Ij5LoodhXGjS4PdRU3qHNmO_Kq1Cxx3ukvB1f-7KGHhASKf_Rs/exec",
+        "url": "https://script.google.com/macros/s/AKfycbxIMtDMdZXMXb71pj34z-daxVNn7_pk_neYMg_Ant9thLnTzwpjShZZu9qVcxUhk9vr/exec",
         "method": "POST",
         "headers": { "Content-Type": "text/plain;charset=utf-8" },
         "bodyFormat": "json",
@@ -284,7 +284,7 @@
   },
   "seo": {
     "title": "One Special Meeting 2026 | Nelson Iheagwam Ministries",
-    "description": "Register for One Special Meeting on 19 September 2026 at The Envoys, Ogba—a gathering for biblical teaching, worship, and fellowship.",
+    "description": "Register for One Special Meeting on 19 September 2026 at 6A Cocoa Industries Rd, Ogba, Ikeja 101233, Lagos.It's a gathering for biblical teaching, worship, and fellowship.",
     "canonicalPath": "/event/osm-2026",
     "imageUrl": "/og-image.jpg",
     "imageAlt": "Pastor Nelson Iheagwam preaching to a congregation"
