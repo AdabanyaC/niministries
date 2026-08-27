@@ -17,6 +17,7 @@ The site is the public web presence for Nelson Iheagwam Ministries (NIM). It int
 - Axios for browser-side HTTP requests.
 - Jest and React Testing Library through Create React App.
 - Static photography, SVG compositions, icons, and illustrations under `src/assets`.
+- Node.js `24.x` is declared in `package.json` for local tooling and Vercel builds.
 
 The tracked dependency lock is `package-lock.json`, so npm is the canonical package manager.
 
