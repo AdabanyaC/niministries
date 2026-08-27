@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         blue: "#060640",
         blackalt: "#14142A",
+        devotional: "#F4FBFF",
+        mist: "#DBE2FA",
       },
     },
   },

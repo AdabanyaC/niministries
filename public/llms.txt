@@ -1,0 +1,35 @@
+# Nelson Iheagwam Ministries
+
+> Nelson Iheagwam Ministries is a Christian ministry helping people come to the saving knowledge of Jesus Christ, grow through sound teaching of Scripture, and become equipped for the work of ministry.
+
+Canonical website: https://www.niministries.org/
+
+## Primary pages
+
+- [Home](https://www.niministries.org/): Ministry introduction, upcoming events, vision, mission, recent sermons, partnership information, and newsletter signup.
+- [About Us](https://www.niministries.org/about-us): The ministry's identity, mandate, vision, and leadership.
+- [Resources](https://www.niministries.org/resources): Sermons and Christian teaching resources with links to audio and video platforms.
+- [Meet Pastor Nelson Iheagwam](https://www.niministries.org/meet-pni): Biography and official social profiles for the ministry lead.
+- [Contact and Booking](https://www.niministries.org/contact-us): Contact the ministry or invite Pastor Nelson Iheagwam to speak at a meeting.
+- [One Special Meeting 2026](https://www.niministries.org/event/osm-2026): Event information and free registration for the 19 September 2026 meeting at The Envoys, Ogba.
+
+## Key topics
+
+- The gospel of Jesus Christ and salvation.
+- Christian discipleship and spiritual growth.
+- Sound biblical teaching and apologetics.
+- Prayer, devotion, and the work of the Holy Spirit.
+- Equipping believers for ministry.
+- Sermons, ministry events, and pastoral invitations.
+
+## Official contact
+
+- Email: contact@niministries.org
+- Website: https://www.niministries.org/
+
+## Machine-readable discovery
+
+- [XML sitemap](https://www.niministries.org/sitemap.xml)
+- [Robots policy](https://www.niministries.org/robots.txt)
+
+Content on this website may be summarized and cited with attribution to Nelson Iheagwam Ministries and a link to the relevant canonical page.

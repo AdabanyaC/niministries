@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import MailSentImg from "./../assets/illustrations/mail.png";
+import { ErrorMessage } from "./AsyncState";
 
 const ContactForm = () => {
   const [senderName, setSenderName] = useState("");
@@ -26,6 +27,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     setLoading(true);
+    setError("");
 
     axios
       .post(`https://nim-mailing-service.onrender.com/api/v1/email/contact-us`, {
@@ -37,8 +39,8 @@ const ContactForm = () => {
         setMailResponse(response.data);
         setLoading(false);
       })
-      .catch(function (error) {
-        setError(error);
+      .catch(function (requestError) {
+        setError(requestError.message);
         setLoading(false);
       });
   };
@@ -70,8 +72,9 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
         className={`${mailResponse.status ? `hidden` : `block`}`}
       >
+        {error && <ErrorMessage message={error} />}
         <div className="mt-10">
-          <label htmlFor="first_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="name" className="block mb-2 text-sm font-bold ">
             Your Name
           </label>
           <input
@@ -84,7 +87,7 @@ const ContactForm = () => {
           />
         </div>
         <div className="mt-10">
-          <label htmlFor="first_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="email" className="block mb-2 text-sm font-bold ">
             Your Email
           </label>
           <input
@@ -97,10 +100,11 @@ const ContactForm = () => {
           />
         </div>
         <div className="mt-10">
-          <label htmlFor="first_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="message" className="block mb-2 text-sm font-bold ">
             How can we help?
           </label>
           <textarea
+            id="message"
             name="message"
             cols="30"
             rows="5"

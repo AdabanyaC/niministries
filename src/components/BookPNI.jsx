@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import BookingConfirmedImg from "./../assets/illustrations/message.png";
+import { ErrorMessage } from "./AsyncState";
 
 const BookPNI = () => {
   const [senderName, setSenderName] = useState("");
@@ -19,6 +20,7 @@ const BookPNI = () => {
     e.preventDefault();
 
     setLoading(true);
+    setError("");
 
     axios
       .post(`https://nim-mailing-service.onrender.com/api/v1/email/book-pni`, {
@@ -35,14 +37,10 @@ const BookPNI = () => {
         setMailResponse(response.data);
         setLoading(false);
       })
-      .catch(function (error) {
-        setError(error);
+      .catch(function (requestError) {
+        setError(requestError.message);
         setLoading(false);
       });
-
-    console.log("Loading", loading);
-    console.log("Email Response", mailResponse);
-    console.log("Error", error);
   };
 
   return (
@@ -73,13 +71,14 @@ const BookPNI = () => {
         onSubmit={handleSubmit}
         className={`${mailResponse.status ? `hidden` : `block`}`}
       >
+        {error && <ErrorMessage message={error} />}
         <div className="mt-10">
-          <label htmlFor="first_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="booking-name" className="block mb-2 text-sm font-bold ">
             Your Name
           </label>
           <input
             type="text"
-            id="name"
+            id="booking-name"
             className="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
             placeholder="Kennedy Adams"
             onChange={(e) => setSenderName(e.target.value)}
@@ -87,12 +86,12 @@ const BookPNI = () => {
           />
         </div>
         <div className="mt-10">
-          <label htmlFor="first_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="booking-email" className="block mb-2 text-sm font-bold ">
             Your Email
           </label>
           <input
             type="email"
-            id="email"
+            id="booking-email"
             className="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
             placeholder="kennedyadams@gmail.com"
             onChange={(e) => setEmail(e.target.value)}
@@ -100,12 +99,12 @@ const BookPNI = () => {
           />
         </div>
         <div className="mt-10">
-          <label htmlFor="church_name" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="church-name" className="block mb-2 text-sm font-bold ">
             Name of Church/Ministry
           </label>
           <input
             type="text"
-            id="name"
+            id="church-name"
             className="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
             placeholder="Nelson Iheagwam Ministries"
             onChange={(e) => setChurchName(e.target.value)}
@@ -113,24 +112,24 @@ const BookPNI = () => {
           />
         </div>
         <div className="mt-10">
-          <label htmlFor="proposed_date" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="proposed-date" className="block mb-2 text-sm font-bold ">
             Proposed Date
           </label>
           <input
             type="date"
-            id="name"
+            id="proposed-date"
             className="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
             onChange={(e) => setProposedDate(e.target.value)}
             required
           />
         </div>
         <div className="mt-10">
-          <label htmlFor="contact_info" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="contact-info" className="block mb-2 text-sm font-bold ">
             Website of Host/Social Media Handle (indicate which)
           </label>
           <input
             type="url"
-            id="name"
+            id="contact-info"
             className="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
             placeholder="Website URL or Links to social media profiles."
             onChange={(e) => setWebsiteSocials(e.target.value)}
@@ -138,12 +137,12 @@ const BookPNI = () => {
           />
         </div>
         <div className="mt-10">
-          <label htmlFor="location" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="location" className="block mb-2 text-sm font-bold ">
             Location
           </label>
           <input
             type="text"
-            id="name"
+            id="location"
             className="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
             placeholder="Lagos, Nigeria."
             onChange={(e) => setLocation(e.target.value)}
@@ -151,12 +150,12 @@ const BookPNI = () => {
           />
         </div>
         <div className="mt-10">
-          <label htmlFor="nameOfMeeting" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="meeting-theme" className="block mb-2 text-sm font-bold ">
             Meeting Theme
           </label>
           <input
             type="text"
-            id="name"
+            id="meeting-theme"
             className="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
             placeholder="Theme of Meeting"
             onChange={(e) => setNameOfMeeting(e.target.value)}
@@ -164,10 +163,11 @@ const BookPNI = () => {
           />
         </div>
         <div className="mt-10">
-          <label htmlFor="message" class="block mb-2 text-sm font-bold ">
+          <label htmlFor="booking-message" className="block mb-2 text-sm font-bold ">
             Your Message
           </label>
           <textarea
+            id="booking-message"
             name="message"
             cols="30"
             rows="5"

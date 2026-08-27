@@ -1,0 +1,292 @@
+{
+  "slug": "osm-2026",
+  "eventCode": "OSM 2026",
+  "announcement": "Upcoming event",
+  "title": "One Special Meeting",
+  "summary": "A focused gathering for clear biblical teaching, heartfelt worship, and the kind of fellowship that strengthens your walk with God.",
+  "date": {
+    "iso": "2026-09-19",
+    "label": "19 September 2026",
+    "timeLabel": "9AM",
+    "timezone": "WAT"
+  },
+  "location": {
+    "name": "The Envoys",
+    "area": "Ogba",
+    "label": "The Envoys, Ogba"
+  },
+  "actions": {
+    "primary": { "label": "Register for free", "target": "registration" }
+  },
+  "heroMedia": {
+    "type": "video",
+    "url": "https://mitchelinaju.com/website/OSM%20VIDEO-compressed.mp4",
+    "posterUrl": "/og-image.jpg",
+    "alt": "Pastor Nelson Iheagwam preaching to a congregation",
+    "eyebrow": "One Special Meeting",
+    "headline": "One gathering. Lasting clarity.",
+    "autoPlay": true,
+    "muted": false,
+    "loop": true,
+    "playsInline": true,
+    "muteLabel": "Mute video",
+    "unmuteLabel": "Unmute video"
+  },
+  "details": {
+    "eyebrow": "Why OSM",
+    "title": "Set apart time for the word, worship, and fellowship.",
+    "description": "One Special Meeting is an opportunity to step away from the noise, receive sound teaching, and respond to what God is doing in and through you.",
+    "highlights": [
+      {
+        "title": "Sound teaching",
+        "description": "Clear, Christ-centred instruction that strengthens conviction and equips you for ministry."
+      },
+      {
+        "title": "Heartfelt worship",
+        "description": "An atmosphere to focus your heart on God and respond to him without distraction."
+      },
+      {
+        "title": "Meaningful fellowship",
+        "description": "Gather with believers who desire to grow, serve, and live out the truth of scripture."
+      }
+    ]
+  },
+  "registration": {
+    "destinations": {
+      "api": {
+        "url": "",
+        "method": "POST",
+        "headers": { "Content-Type": "application/json" },
+        "bodyFormat": "json",
+        "mode": "cors"
+      },
+      "googleAppsScript": {
+        "url": "https://script.google.com/macros/s/AKfycbxxT5psT4MUqbMNU6Ij5LoodhXGjS4PdRU3qHNmO_Kq1Cxx3ukvB1f-7KGHhASKf_Rs/exec",
+        "method": "POST",
+        "headers": { "Content-Type": "text/plain;charset=utf-8" },
+        "bodyFormat": "json",
+        "mode": "cors"
+      }
+    },
+    "theme": {
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "text": "#14142A",
+      "muted": "#6B7280",
+      "primary": "#060640",
+      "primaryContrast": "#FFFFFF",
+      "border": "#DBE2FA",
+      "error": "#B42318",
+      "success": "#147D64",
+      "radius": "16px",
+      "fontFamily": "Montserrat, sans-serif",
+      "spacing": "24px"
+    },
+    "form": {
+      "id": "osm-2026-registration",
+      "ui": {
+        "eyebrow": "Registration",
+        "submittingLabel": "Submitting…",
+        "requiredNote": "All fields marked with * are required.",
+        "unsupportedFieldTypeMessage": "No renderer is registered for field type “{type}”.",
+        "submissionErrorMessage": "We couldn't save your response. Please check your connection and try again."
+      },
+      "title": "Let's get to know you",
+      "description": "Share a few details and choose where you'd like to make an impact.",
+      "submitLabel": "Submit Registration",
+      "defaultValues": {
+        "wantsToVolunteer": false
+      },
+      "outcomes": [
+        {
+          "when": {
+            "fieldId": "wantsToVolunteer",
+            "operator": "equals",
+            "value": true
+          },
+          "eyebrow": "Volunteer application received",
+          "title": "Welcome to the team.",
+          "message": "Your volunteer preferences have been recorded. Join the WhatsApp group to meet the team and receive next steps.",
+          "resetLabel": "Submit another response",
+          "action": {
+            "label": "Join the WhatsApp group",
+            "href": "https://chat.whatsapp.com/CvNcwCkGhvyHoQORRSex8t?s=sh&p=i&mlu=4&amv=2"
+          }
+        },
+        {
+          "eyebrow": "Response received",
+          "title": "Thank you for checking in.",
+          "message": "Your details have been submitted successfully. We'll keep you updated with what comes next.",
+          "resetLabel": "Submit another response"
+        }
+      ],
+      "fields": [
+        {
+          "id": "firstName",
+          "type": "text",
+          "label": "First name",
+          "placeholder": "e.g. Jordan",
+          "autoComplete": "given-name",
+          "required": true,
+          "validation": {
+            "requiredMessage": "First name is required.",
+            "minLength": 2,
+            "minLengthMessage": "Please enter at least 2 characters."
+          }
+        },
+        {
+          "id": "lastName",
+          "type": "text",
+          "label": "Last name",
+          "placeholder": "e.g. Avery",
+          "autoComplete": "family-name",
+          "required": true,
+          "validation": {
+            "requiredMessage": "Last name is required.",
+            "minLength": 2,
+            "minLengthMessage": "Please enter at least 2 characters."
+          }
+        },
+        {
+          "id": "email",
+          "type": "email",
+          "label": "Email address",
+          "placeholder": "you@example.com",
+          "autoComplete": "email",
+          "required": true,
+          "validation": {
+            "requiredMessage": "Email address is required.",
+            "email": true,
+            "emailMessage": "Enter a valid email address."
+          }
+        },
+         {
+          "id": "phoneNumber",
+          "type": "tel",
+          "label": "Phone number",
+          "placeholder": "e.g. 09012345678",
+          "autoComplete": "tel",
+          "required": true,
+          "validation": {
+            "requiredMessage": "Phone number is required.",
+            "pattern": "^\\d{4}\\d{3}\\d{4}$",
+            "patternMessage": "Please enter a valid phone number (e.g., 09012345678)."
+          }
+        },
+        {
+          "id": "wantsToVolunteer",
+          "type": "checkbox",
+          "label": "I want to volunteer",
+          "description": "Turn this on to explore available teams."
+        },
+        {
+          "id": "unit",
+          "type": "radio",
+          "label": "Select a unit",
+          "required": true,
+          "validation": {
+            "requiredMessage": "Please select a unit."
+          },
+          "options": [
+            { "label": "Technical", "value": "technical" },
+            { "label": "Protocol", "value": "protocol" },
+            { "label": "Music", "value": "music" }
+          ],
+          "dependsOn": {
+            "fieldId": "wantsToVolunteer",
+            "operator": "truthy"
+          }
+        },
+        {
+          "id": "technicalRole",
+          "type": "select",
+          "label": "Technical team",
+          "placeholder": "Choose a role",
+          "required": true,
+          "validation": {
+            "requiredMessage": "Please choose a technical role."
+          },
+          "options": [
+            { "label": "Camera", "value": "camera" },
+            { "label": "Light", "value": "light" },
+            { "label": "Screen/Projection", "value": "screen/Projection" }
+          ],
+          "dependsOn": {
+            "fieldId": "unit",
+            "operator": "equals",
+            "value": "technical"
+          }
+        },
+        {
+          "id": "musicRole",
+          "type": "select",
+          "label": "Music team",
+          "placeholder": "Choose a role",
+          "required": true,
+          "validation": {
+            "requiredMessage": "Please choose a music role."
+          },
+          "options": [
+            { "label": "Instrumentalist", "value": "instrumentalist" },
+            { "label": "Vocalist", "value": "vocalist" }
+          ],
+          "dependsOn": {
+            "fieldId": "unit",
+            "operator": "equals",
+            "value": "music"
+          }
+        },
+        {
+          "id": "vocalRole",
+          "type": "select",
+          "label": "What part do you sing?",
+          "placeholder": "Choose a vocal part",
+          "required": true,
+          "validation": {
+            "requiredMessage": "Please choose a vocal part."
+          },
+          "options": [
+            { "label": "Tenor", "value": "tenor" },
+            { "label": "Alto", "value": "alto" },
+            { "label": "Soprano", "value": "soprano" }
+          ],
+          "dependsOn": {
+            "fieldId": "musicRole",
+            "operator": "equals",
+            "value": "vocalist"
+          }
+        },
+        {
+          "id": "instrument",
+          "type": "select",
+          "label": "Primary instrument",
+          "placeholder": "Choose an instrument",
+          "required": true,
+          "validation": {
+            "requiredMessage": "Please choose an instrument."
+          },
+          "options": [
+            { "label": "Bass Guitar", "value": "Bass Guitar" },
+            { "label": "Electric Guitar", "value": "Electric Guitar" },
+            { "label": "Acoustic Guitar", "value": "Acoustic Guitar" },
+            { "label": "Keyboard", "value": "keyboard" },
+            { "label": "Trumpet", "value": "trumpet" },
+            { "label": "Drums", "value": "drums" }
+          ],
+          "dependsOn": {
+            "fieldId": "musicRole",
+            "operator": "equals",
+            "value": "instrumentalist"
+          }
+        }
+      ]
+    }
+  },
+  "seo": {
+    "title": "One Special Meeting 2026 | Nelson Iheagwam Ministries",
+    "description": "Register for One Special Meeting on 19 September 2026 at The Envoys, Ogba—a gathering for biblical teaching, worship, and fellowship.",
+    "canonicalPath": "/event/osm-2026",
+    "imageUrl": "/og-image.jpg",
+    "imageAlt": "Pastor Nelson Iheagwam preaching to a congregation"
+  }
+}
