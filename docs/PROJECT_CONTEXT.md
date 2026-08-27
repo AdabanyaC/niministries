@@ -23,6 +23,7 @@ The tracked dependency lock is `package-lock.json`, so npm is the canonical pack
 
 ## Runtime shape
 
+
 `src/index.js` mounts `App` in React strict mode. `src/App.js` wraps the application in `BrowserRouter` and selects one route-level container. Containers compose reusable components; API-backed components load normalized public content through `src/services/contentApi.js` in `useEffect` hooks.
 
 There is no application-wide state store, authentication layer, server-side rendering, or local backend in this repository. State is local to each component.
