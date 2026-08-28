@@ -189,6 +189,7 @@
           },
           "options": [
             { "label": "Technical", "value": "technical" },
+            { "label": "Social Media", "value": "social media" },
             { "label": "Protocol", "value": "protocol" },
             { "label": "Music", "value": "music" }
           ],
